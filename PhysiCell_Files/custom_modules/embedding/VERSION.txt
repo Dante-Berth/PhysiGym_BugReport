@@ -1,0 +1,5 @@
+# physigym PhysiCell user_project templates
+# python3 physicell embedding library
+# original source code: https://github.com/elmbeech/physicellembedding
+# modified source code: https://github.com/Dante-Berth/PhysiGym
+__version__ = '0.0.5'
