@@ -1,0 +1,38 @@
+run: PhysiCellEnv-0
+run_name: PhysiCellEnv-0
+seed: 42  # Your seed
+env_id: "physigym/ModelPhysiCellEnv-v0"  # Your environment ID
+exp_name: PhysiCellEnv-0  # Your experiment name
+idx: 0  # Your index
+capture_video: false  # Whether to capture video
+replay_buffer:
+  memory_size: 1000000  # Size of replay buffer
+  list_named_tuple:
+    - state
+    - action
+    - next_state
+    - reward
+    - done  # Your list of named tuples (if any)
+gamma: 0.99
+tau: 0.005
+exploration_noise: 0.1
+policy_frequency: 2
+noise_clip: 0.5
+device: cpu
+batch_size: 64  # Batch size
+total_steps: 1000000  # Total steps
+learning_start: 128  # Learning start steps
+lr_actor: 0.0003
+lr_critic: 0.0003
+policy_noise: 0.2
+actor:
+  layer_1_out_features: 256
+  layer_2_out_features: 256
+critic_1:
+  layer_1_out_features: 256
+  layer_2_out_features: 256
+critic_2:
+  layer_1_out_features: 256
+  layer_2_out_features: 256
+step_multiple_validation: 100
+step_multiple_evaluation: 100
